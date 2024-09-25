@@ -1,0 +1,17 @@
+.container{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+}
+.search-bar{
+    width: 33%;
+    height: 5%;
+    border: inset violet;
+    border-radius: 5px;
+    background-color: #333333;
+
+}
+.search-bar:focus{
+    width: 100%;
+    border-color: blue;
+}
