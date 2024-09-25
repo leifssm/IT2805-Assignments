@@ -1,0 +1,28 @@
+.target {
+  width: 200px;
+  display: flex;
+}
+
+.target div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 100vmax;
+}
+
+.target .black {
+  background-color: black;
+}
+
+.target .blue {
+  background-color: #2892f8;
+}
+
+.target .red {
+  background-color: red;
+}
+
+.target .yellow {
+  background-color: yellow;
+}
