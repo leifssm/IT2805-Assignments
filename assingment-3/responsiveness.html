@@ -15,6 +15,7 @@
       body {
         font-family: Arial, sans-serif;
         line-height: 1.6;
+
       }
 
       header {
@@ -53,10 +54,12 @@
 
       .feature-item {
         background: #fff;
+        display: flex;
+        flex-direction: column;
         padding: 20px;
         border: 1px solid #ddd;
         width: 30%;
-        height: 90vw;
+        font-size: calc(1vw + 1vh)
       }
 
       footer {
@@ -70,7 +73,7 @@
         width: 100%;
         align-items: center;
       }
-      @media (max-width: 550px) {
+      @media (max-width: 560px) {
         .features {
           flex-direction: column;
           align-items: center;
@@ -82,7 +85,7 @@
         img {
           height: 80%;
         }
-        @media (min-width: 325px) and (max-width: 549px) {
+        @media (min-width: 325px) and (max-width: 560px) {
           body {
             font-size: 80%;
           }
@@ -90,9 +93,6 @@
         @media (min-width: 200px) and (max-width: 325px) {
           body {
             font-size: 60%;
-          }
-          .feature-item{
-            height: 150vw;
           }
         }
         @media (min-width: 150px) and (max-width: 200px) {
@@ -102,9 +102,6 @@
           .intro {
             padding: 0px;
           }
-          .feature-item{
-            height: 200vw;
-          }
         }
         @media (max-width: 150px) {
           body {
@@ -112,12 +109,9 @@
           }
           .intro {
             padding: 0px;
-          }
-          .feature-item {
-            height: 400px;
-          }
         }
       }
+    }
     </style>
   </head>
   <body>
@@ -141,19 +135,20 @@
         <div class="feature-item">
           <h3>White kitchen</h3>
           <img src="images/white_kitchen.png" alt="White kitchen" />
-          <p>
-            Our gorgeous white kitchen is very gorgeous and it is indeed white
-          </p>
+          <p>Our gorgeous white kitchen is very gorgeous and it is indeed white</p>
+          <p>I can't sell kitchens but this one is nice, I think</p>
         </div>
         <div class="feature-item">
           <h3>Blue kitchen</h3>
           <img src="images/blue_kitchen.jpg" alt="Blue kitchen" />
-          <p>Our gorgeous blue kitchen</p>
+          <p>Our gorgeous blue kitchen is very gorgeous and it is indeed blue </p>
+          <p>I can't sell kitchens but this one is nice, I think</p>
         </div>
         <div class="feature-item">
           <h3>Colorful kitchen</h3>
           <img src="images/colorful_kitchen.png" alt="Colorful kitchen" />
           <p>Our gorgeous colorful kitchen.</p>
+          <p>I can't sell kitchens but this one is nice, I think</p>
         </div>
       </section>
     </main>
