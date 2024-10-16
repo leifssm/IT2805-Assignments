@@ -63,13 +63,26 @@ footer {
   background: #333;
   color: #fff;
 }
+img{
+  height: 50%;
+  width: 100%
+}
+@media (min-width: 400px) and (max-width: 700px){
+    h2{
+      rotate: 90deg;
 
+    }
+  @media (min-width: 800px){
+    h2{
+      rotate: -90deg
+    }
+}
 </style>
 
 </head>
 <body>
   <header>
-    <h1>Responsive Website Design</h1>
+    <h1>Good Kitchens LLC</h1>
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
@@ -81,26 +94,29 @@ footer {
   </header>
   <main>
     <section class="intro">
-      <h2>Welcome to our site</h2>
-      <p>This is a demonstration of a responsive website using HTML5 and CSS3.</p>
+      <h2>Welcome to our webstore</h2>
+      <p>This is a demonstration of a responsive kitchen website.</p>
     </section>
     <section class="features">
       <div class="feature-item">
-        <h3>Feature 1</h3>
-        <p>Description of feature 1.</p>
+        <h3>White kitchen </h3>
+        <img src="images/white_kitchen.png" alt="White kitchen">
+        <p>Our gorgeous white kitchen</p>
       </div>
       <div class="feature-item">
-        <h3>Feature 2</h3>
-        <p>Description of feature 2.</p>
+        <h3>Blue kitchen</h3>
+        <img src="images/blue_kitchen.jpg" alt="Blue kitchen">
+        <p>Our gorgeous blue kitchen</p>
       </div>
       <div class="feature-item">
-        <h3>Feature 3</h3>
-        <p>Description of feature 3.</p>
+        <h3>Colorful kitchen</h3>
+        <img src="images/colorful_kitchen.png" alt="Colorful kitchen">
+        <p>Our gorgeous colorful kitchen.</p>
       </div>
     </section>
   </main>
   <footer>
-    <p>&copy; 2024 Responsive Website</p>
+    <p>&copy; 2024 Good Kitchens LLC</p>
   </footer>
 </body>
 </html>
