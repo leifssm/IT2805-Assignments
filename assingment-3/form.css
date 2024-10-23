@@ -1,0 +1,33 @@
+.input:has(
+  > input:not([type="radio"]):required
+) > label:after,
+.required:after {
+  content: ' *';
+  color: red;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  max-width: 100%;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  padding: 2rem;
+  width: clamp(500px, 50%, 700px);
+  border: solid thin black;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

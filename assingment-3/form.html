@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <link rel="stylesheet" href="form.css">
+  <script defer src="form.js"></script>
+</head>
+<body>
+  <main>
+    <form action="javascript:void(0);">
+      <h1>Good Kitchens LLC Customer Registration Form</h1>
+      <div class="content">
+        <div class="input">
+          <label for="name">Navn:</label>
+          <input id="name" type="text" required>
+        </div>
+        <div class="input">
+          <label for="email">Epost:</label>
+          <input id="email" type="email" required>
+        </div>
+        <div class="input">
+          <label for="password">Passord:</label>
+          <input id="password" minlength="8" maxlength="64" type="password" required>
+        </div>
+        <div class="input">
+          <label for="phone">Telefon:</label>
+          <input id="phone" type="text" pattern="\(\d{3}\) \d{3}-\d{4}" required>
+        </div>
+        <div class="input">
+          <label for="birthdate">Bursdag:</label>
+          <input id="birthdate" type="date" max="2006-10-23">
+        </div>
+        <div class="input">
+          <label for="country">Land:</label>
+          <select name="country" id="country">
+            <option value="norway">Norge</option>
+            <option value="sweden">Sverige</option>
+            <option value="denmark">Danmark</option>
+          </select>
+        </div>
+        <div class="input">
+          <label class="label required">Kjønn:</label>
+          <span>
+            <input name="gender" id="man" type="radio" required>
+            <label for="man">Mann</label>
+          </span>
+          <span>
+            <input name="gender" id="woman" type="radio">
+            <label for="woman">Dame</label>
+          </span>
+          <span>
+            <input name="gender" id="gender_other" type="radio">
+            <label for="gender_other">Annet</label>
+          </span>
+          <span>
+            <input name="gender" id="blank" type="radio">
+            <label for="blank">Vil ikke svare</label>
+          </span>
+        </div>
+        <div class="input">
+          <label class="label required">Interresser:</label>
+          <span>
+            <input name="interests" id="sport" type="checkbox">
+            <label for="sport">Sport</label>
+          </span>
+          <span>
+            <input name="interests" id="it" type="checkbox">
+            <label for="it">IT</label>
+          </span>
+          <span>
+            <input name="interests" id="cooking" type="checkbox">
+            <label for="cooking">Matlaging</label>
+          </span>
+          <span>
+            <input name="interests" id="interests_other" type="checkbox">
+            <label for="interests_other">Annet</label>
+          </span>
+        </div>
+        <div class="input">
+          <label for="comments">Andre Kommentarer:</label>
+          <textarea id="comments"></textarea>
+        </div>
+        <div class="input">
+          <label for="form-satisfaction">Hvor fornøyd er du for denne formen? <b id="satisfaction">10</b></label>
+          <input id="form-satisfaction" type="range" min="1" max="10" value="10">
+        </div>
+        <div class="input">
+          <label for="picture">Profilbilde:</label>
+          <input id="picture" type="file">
+        </div>
+        <div class="button-wrapper">
+          <input type="submit" value="Send inn">
+          <input type="reset" value="Reset">
+        </div>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
