@@ -1,122 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
- 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Good Kitchens front page</title>
 
-<style>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
 
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-}
+      }
 
-header {
-  background: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
+      header {
+        background: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-}
+      nav ul {
+        list-style: none;
+        padding: 0;
+      }
 
-nav ul li {
-  display: inline;
-  margin-right: 10px;
-}
+      nav ul li {
+        display: inline;
+        margin-right: 10px;
+      }
 
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-}
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+      }
 
-.intro {
-  text-align: center;
-  padding: 40px;
-  background: #f4f4f4;
-}
+      .intro {
+        text-align: center;
+        padding: 40px;
+        background: #f4f4f4;
+      }
 
-.features {
-  display: flex;
-  justify-content: space-around;
-  padding: 20px;
-}
+      .features {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+      }
 
-.feature-item {
-  background: #fff;
-  padding: 20px;
-  border: 1px solid #ddd;
-  width: 30%;
-}
+      .feature-item {
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        border: 1px solid #ddd;
+        width: 30%;
+        font-size: calc(1vw + 1vh)
+      }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #333;
-  color: #fff;
-}
-img{
-  height: 50%;
-  width: 100%
-}
-@media (min-width: 400px) and (max-width: 700px){
-    h2{
-      rotate: 90deg;
-
+      footer {
+        text-align: center;
+        padding: 20px;
+        background: #333;
+        color: #fff;
+      }
+      img {
+        height: 40%;
+        width: 100%;
+        align-items: center;
+      }
+      @media (max-width: 560px) {
+        .features {
+          flex-direction: column;
+          align-items: center;
+          gap: 40px;
+        }
+        .feature-item {
+          width: 100%;
+        }
+        img {
+          height: 80%;
+        }
+        @media (min-width: 325px) and (max-width: 560px) {
+          body {
+            font-size: 80%;
+          }
+        }
+        @media (min-width: 200px) and (max-width: 325px) {
+          body {
+            font-size: 60%;
+          }
+        }
+        @media (min-width: 150px) and (max-width: 200px) {
+          body {
+            font-size: 50%;
+          }
+          .intro {
+            padding: 0px;
+          }
+        }
+        @media (max-width: 150px) {
+          body {
+            font-size: 40%;
+          }
+          .intro {
+            padding: 0px;
+        }
+      }
     }
-  @media (min-width: 800px){
-    h2{
-      rotate: -90deg
-    }
-}
-</style>
-
-</head>
-<body>
-  <header>
-    <h1>Good Kitchens LLC</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section class="intro">
-      <h2>Welcome to our webstore</h2>
-      <p>This is a demonstration of a responsive kitchen website.</p>
-    </section>
-    <section class="features">
-      <div class="feature-item">
-        <h3>White kitchen </h3>
-        <img src="images/white_kitchen.png" alt="White kitchen">
-        <p>Our gorgeous white kitchen</p>
-      </div>
-      <div class="feature-item">
-        <h3>Blue kitchen</h3>
-        <img src="images/blue_kitchen.jpg" alt="Blue kitchen">
-        <p>Our gorgeous blue kitchen</p>
-      </div>
-      <div class="feature-item">
-        <h3>Colorful kitchen</h3>
-        <img src="images/colorful_kitchen.png" alt="Colorful kitchen">
-        <p>Our gorgeous colorful kitchen.</p>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2024 Good Kitchens LLC</p>
-  </footer>
-</body>
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Good Kitchens LLC</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="intro">
+        <h2>Welcome to our webstore</h2>
+        <p>This is a demonstration of a responsive kitchen website.</p>
+      </section>
+      <section class="features">
+        <div class="feature-item">
+          <h3>White kitchen</h3>
+          <img src="images/white_kitchen.png" alt="White kitchen" />
+          <p>Our gorgeous white kitchen is very gorgeous and it is indeed white</p>
+          <p>I can't sell kitchens but this one is nice, I think</p>
+        </div>
+        <div class="feature-item">
+          <h3>Blue kitchen</h3>
+          <img src="images/blue_kitchen.jpg" alt="Blue kitchen" />
+          <p>Our gorgeous blue kitchen is very gorgeous and it is indeed blue </p>
+          <p>I can't sell kitchens but this one is nice, I think</p>
+        </div>
+        <div class="feature-item">
+          <h3>Colorful kitchen</h3>
+          <img src="images/colorful_kitchen.png" alt="Colorful kitchen" />
+          <p>Our gorgeous colorful kitchen.</p>
+          <p>I can't sell kitchens but this one is nice, I think</p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Good Kitchens LLC</p>
+    </footer>
+  </body>
 </html>
