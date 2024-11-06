@@ -1,6 +1,6 @@
 /* Task  1.2 */
 console.log('Task  1.2')
-for (let i = 0; i <= 20; i++){
+for (let i = 1; i <= 20; i++){
     console.log(i);
 }
     
@@ -9,9 +9,10 @@ console.log('Task  1.3')
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 for (let i = 0; i < numbers.length; i++){
-    if (numbers[i]%3 == 0){
+    const value = numbers[i];
+    if (value % 3 === 0){
         console.log("Eple");
-    } else if (numbers[i]%5 == 0){
+    } else if (value % 5 === 0){
         console.log("Kake")
     } else{
         console.log(numbers[i])
@@ -19,7 +20,7 @@ for (let i = 0; i < numbers.length; i++){
 }
 
 /* Task  1.4 */
-const   pagetitle = document.getElementById("title");
+const pagetitle = document.getElementById("title");
 pagetitle.innerText = "Hello, Javascript!";
 
 /* Task  1.5 */
@@ -74,6 +75,4 @@ for (let i = 0; i<technologies.length; i++){
     const newEntry = document.createTextNode(technologies[i]);
     liElement.appendChild(newEntry);
     list.appendChild(liElement);
-
-
 }

@@ -1,41 +1,46 @@
-document.getElementById("tasks").focus();
-let taskList = document.getElementById("tasklist");
-var tasks = [];
+document.getElementById('tasks').focus();
+const taskList = document.getElementById('tasklist');
+const tasks = [];
 
-const buttonForTask = document.querySelector("div.newtasks button");
-let outputElement = document.createElement("p");
-outputElement.innerText = 0 + "/" + 0 + " completed";
-taskList.insertAdjacentElement("beforeend", outputElement);
+const buttonForTask = document.querySelector('div.newtasks button');
 
-buttonForTask.addEventListener("click", addTask);
+const outputElement = document.createElement('p');
+taskList.insertAdjacentElement('beforeend', outputElement);
 
-function addTask () {
-    let liElement = document.createElement("li");
-    let check = document.createElement("INPUT");
-    check.setAttribute("type", "checkbox");
-    let taskValue = document.createTextNode(document.getElementById("tasks").value);
-    tasks.push({
-        taskname: taskValue
-    });
+const updateCheckedAmount = () => {
+  const allCheckBox = document.querySelectorAll('input[type=checkbox]');
+  const checked = document.querySelectorAll(
+    'input[type="checkbox"]:checked'
+  ).length;
+  outputElement.innerText = `${checked}/${allCheckBox.length} completed`;
+};
 
-    liElement.appendChild(check);
-    liElement.appendChild(taskValue);
-    taskList.insertBefore(liElement, taskList.children[0]);
-    document.getElementById("tasks").value = "";
+updateCheckedAmount();
 
-    let allCheckBox = document.querySelectorAll("input[type=checkbox]");
-    outputElement.innerText = (document.querySelectorAll('input[type="checkbox"]:checked').length) + "/" + allCheckBox.length + " completed";
+function addTask() {
+  const liElement = document.createElement('li');
+  const checkBox = document.createElement('input');
 
-    allCheckBox.forEach((item) => {
-        item.addEventListener('input', () => {
-            if (item.checked){
-                item.parentElement.style.textDecoration = "line-through";
-            }
-            else{
-                item.parentElement.style.textDecoration ="none";
-            }
-            outputElement.innerText = (document.querySelectorAll('input[type="checkbox"]:checked').length) + "/" + allCheckBox.length + " completed";
-        });
-    });
+  checkBox.type = 'checkbox';
+
+  const taskName = document.getElementById('tasks').value;
+  const taskValue = document.createTextNode(taskName);
+
+  tasks.push({ taskName });
+
+  liElement.appendChild(checkBox);
+  liElement.appendChild(taskValue);
+  taskList.insertBefore(liElement, taskList.children[0]);
+  document.getElementById('tasks').value = '';
+
+  updateCheckedAmount();
+
+  checkBox.addEventListener('input', () => {
+    checkBox.parentElement.style.textDecoration = checkBox.checked
+      ? 'line-through'
+      : 'none';
+    updateCheckedAmount();
+  });
 }
 
+buttonForTask.addEventListener('click', addTask);
